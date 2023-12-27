@@ -251,7 +251,6 @@ async function handleLogin() {
   } else {
     try {
       const loginResult = await authStore.login(loginData);
-      // console.log("loginResult: ", loginResult);
       if (loginResult.success) {
         showNotification.value = true;
         msgTitle.value = "登入成功";
@@ -267,7 +266,6 @@ async function handleLogin() {
       }
     } catch (error) {
       showNotification.value = true;
-      // console.log("error: ", error);
       msgTitle.value = "登入失敗";
       msgMeta.value = "例外狀況";
     }
