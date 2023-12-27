@@ -22,7 +22,7 @@ export const useAuthStore = defineStore("auth", () => {
       password,
     })) as AxiosResponse;
     if (result.data) {
-      // console.log("result.data: ", result.data);
+      console.log("result.data: ", result.data);
       // console.log("result.data.data: ", result.data.data);
       const { token } = result.data.data;
       // console.log("token: ", token);
