@@ -22,6 +22,7 @@ export const useAuthStore = defineStore("auth", () => {
       password,
     })) as AxiosResponse;
     if (result.data) {
+      console.log("result.data", result.data);
       const { token } = result.data.data;
       userToken.value = token;
       // localStorage 存進 accessToken
@@ -29,7 +30,7 @@ export const useAuthStore = defineStore("auth", () => {
 
       return result.data;
     } else {
-      // console.log("error.response.status=>", result);
+      console.log("error.response.status=>", result);
       alert("帳號密碼錯誤，請重新輸入");
       throw new Error("Failed to authenticate. Check your login data.");
     }
