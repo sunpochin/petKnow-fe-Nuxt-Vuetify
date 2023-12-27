@@ -262,7 +262,7 @@ async function handleLogin() {
       } else {
         showNotification.value = true;
         msgTitle.value = "登入失敗";
-        msgMeta.value = "請輸入正確帳號密碼";
+        msgMeta.value = "例外狀況";
       }
     } catch (error) {
       showNotification.value = true;
