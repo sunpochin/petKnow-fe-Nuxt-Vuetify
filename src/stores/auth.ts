@@ -22,6 +22,7 @@ export const useAuthStore = defineStore("auth", () => {
       password,
     })) as AxiosResponse;
     if (result.data) {
+      console.log("result", result);
       console.log("result.data", result.data);
       const { token } = result.data.data;
       userToken.value = token;
